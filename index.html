@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDACISCO | Academia de Redes y Ciberseguridad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <i class="fas fa-network-wired"></i> WDACISCO
+        </div>
+        <nav class="user-nav">
+            <span id="current-module-title">Dashboard</span>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul id="module-list">
+                </ul>
+        </aside>
+
+        <main class="content-area" id="main-content">
+            </main>
+
+        <section class="ai-tutor-minimized" id="ai-chat-container">
+            <div class="ai-header">
+                <span><i class="fas fa-robot"></i> Profesor IA CCNA</span>
+                <button onclick="toggleAI()"><i class="fas fa-chevron-up"></i></button>
+            </div>
+            <div class="ai-body" id="ai-messages"></div>
+            <div class="ai-footer">
+                <input type="text" id="ai-input" placeholder="Pregunta sobre redes...">
+                <button onclick="askAI()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="tests/quiz-engine.js"></script>
+    <script src="ai/ai-engine.js"></script>
+</body>
+</html>
